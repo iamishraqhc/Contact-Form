@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>TALK TO US</h1>
+
+<div class="container">
+  <form  name="form" class="contact-form">
+  	<label for="salutation" class="required-field">Salutation</label>
+    <select id="salutation" name="salutation" required>
+      <option value="Mr">Mr</option>
+      <option value="Mrs">Mrs</option>
+      <option value="Mrs">Ms</option>
+      <option value="Other">Other</option>
+    </select>
+    
+    <label for="name" class="required-field">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+    <label for="email" class="required-field">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email.." required></br>
+    
+    <label for="inquiry" class="required-field">Inquiry</label></br>
+    <input type="radio" onclick="optionCheck();" name="option" value="Option 1" id="option1" required> Option1 <input type="radio" onclick="optionCheck();" name="option" value="Option 2" id="option2" required> Option2 <input type="radio" onclick="optionCheck();" name="option" value="Option 3" id="option3" required>Option3<br>
+    <div id="ifOption2" style="visibility:hidden">
+        <label for="subject">Message</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+     
+    <label for="dataprotectionconsent" class="required-field">Data Protection Consent</label></br>
+    <input type="checkbox" id="data-consent" name="data-consent" value="data-consent" required>
+    <label for="data-consent">By using this form you agree with the storage and handling of your data by this website in accordance with our Privacy Policy </label><br>   
+    <div class="button"> 
+      <input type="submit" name="submit" value="Send Message" onclick="ValidateEmail(document.form.email)">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
+<script src="script.js"></script>
